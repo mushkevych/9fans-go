@@ -1,4 +1,4 @@
-module 9fans.net/go
+module github.com/mushkevych/9fans-go
 
 go 1.23.0
 
