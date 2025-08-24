@@ -163,6 +163,11 @@ func (c *Conn) Cursor(cursor *Cursor) error {
 	return err
 }
 
+// Cursor2 on Plan 9: gracefully degrade to legacy Cursor.
+func (c *Conn) Cursor2(cur *Cursor, cur2 *Cursor2) error {
+	return c.Cursor(cur)
+}
+
 func (c *Conn) BounceMouse(m *Mouse) error {
 	panic("unimplemented")
 }
